@@ -2,24 +2,38 @@
 
 using namespace std;
 
+void draw_vert_line(int hm){//How Much
+    for(int i=0;i<hm;i++){
+        cout<<"*";
+    }
+}
+
+void draw_sides(int hm){
+    cout<<endl;
+    for(int j=0; j<hm;j++){
+        cout<<"*";
+        for(int i=0;i<hm;i++){
+            cout<<" ";
+        }
+        cout<<"*";
+        cout<<endl;
+    }
+
+}
+
+void draw_square(int size){
+    draw_vert_line(size);
+    draw_sides(size-2);
+    draw_vert_line(size);
+}
+
 int main()
 {
     int length = 0;
     cout<<"Enter length of square side: ";
     cin>>length;
-    for(int i=0;i<length;i++){
-        for(int j=0;j<length;j++){
-            if(i==0||i==length-1){
-                cout<<"*";
-            }else{
-                if(j==0||j==length-1){
-                    cout<<"*";
-                }else{
-                    cout<<" ";
-                }
-            }
+    cout<<endl;
 
-        }
-        cout<<endl;
-    }
+    draw_square(5);
+
 }
