@@ -46,7 +46,12 @@ int main()
             case 2:{
                 cout<<"How much? ";
                 cin>>enter_pin_or_money;
-                bank_acc[enter_number] = bank_acc[enter_number] - enter_pin_or_money;
+                if(bank_acc[enter_number] - enter_pin_or_money>=0){
+                    bank_acc[enter_number] = bank_acc[enter_number] - enter_pin_or_money;
+                }else{
+                    cout<<"Error! Can't do that!"<<endl;
+                    system("pause");
+                }
                 if(bank_acc[enter_number]==0 ||bank_acc[enter_number]<0){
                     bank_acc[enter_number] = 0;
                 }
