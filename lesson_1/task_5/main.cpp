@@ -3,13 +3,6 @@
 
 using namespace std;
 
-double hmf(double m, int s){//How Much Fuel
-    m = m/3;
-    m = round(m);
-    double fuel = (m - 2)*s;
-    return fuel;
-}
-
 int main()
 {
     double mass = 0;
@@ -18,7 +11,12 @@ int main()
     cout<<"How heavy is a spaceship: ";
     cin>>mass;
 
+    double fuel = 0;
+    mass = mass/3;
+    mass = round(mass);
+    fuel = (mass - 2)*s;
+
     cout<<"This is how much fuel you needed: ";
-    cout<<hmf(mass, s);
+    cout<<fuel;
     return 0;
 }
