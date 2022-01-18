@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int punctuation_marks = 0, empty_space = 0;;
-    char sentence[20] = {'A'};
+    char sentence[20] = {0};
     cout<<"Enter sentence (MAX characters: 20): ";
     cin.getline(sentence, 20);
 
